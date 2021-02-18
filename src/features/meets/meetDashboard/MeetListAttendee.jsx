@@ -1,8 +1,11 @@
-import React from 'React'
+import React from 'react'
+import { List, Image } from 'semantic-ui-react'
 
-export default function MeetListAttendee(){
+export default function MeetListAttendee(props){
   return(
-    <h1>List</h1>
+    <List.Item>
+      <Image size='mini' circular src={props.attendee.photoURL}/>
+    </List.Item>
   )
 
 }

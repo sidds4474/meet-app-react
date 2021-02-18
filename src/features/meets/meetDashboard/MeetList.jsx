@@ -1,14 +1,12 @@
 import React from 'react'
 import MeetListItem from './MeetListItem'
 
-export default function MeetList(){
+export default function MeetList(props){
   return(
     <div>
-       <MeetListItem />
-       <MeetListItem />
-       <MeetListItem />
-       <MeetListItem />
-       <MeetListItem />
+        {props.meets.map(meet =>(
+           <MeetListItem  meet={meet} key={meet.id}/>
+        ) )}
     </div>
    
   )
